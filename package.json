@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10",
+    "mocha": "^10.6.0",
+    "playwright": "^1.45.1",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "test:chromium:headless": "playwright test --project=chromium",
+    "test:chromium:headful": "playwright test --project=chromium --headed",
+    "test:api:chromium:headless": "playwright test --project=chromium tests/api.test.ts",
+    "test:ui:chromium:headless": "playwright test --project=chromium tests/ui.test.ts",
+    "test:ui:chromium:headful": "playwright test --project=chromium tests/ui.test.ts --headed",
+    "test:firefox:headless": "playwright test --project=firefox",
+    "test:firefox:headful": "playwright test --project=firefox --headed",
+    "test:api:firefox:headless": "playwright test --project=firefox tests/api.test.ts",
+    "test:ui:firefox:headless": "playwright test --project=firefox tests/ui.test.ts",
+    "test:ui:firefox:headful": "playwright test --project=firefox tests/ui.test.ts --headed",
+    "test:report": "npx playwright show-report"
+  }
+}
